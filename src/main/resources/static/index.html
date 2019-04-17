@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+	<title>SmartWeb</title>
+
+	<style type="text/css">
+		.sidebar {
+		  position: fixed;
+		  top: 56px;
+		  bottom: 0;
+		  left: 0;
+		  z-index: 100; /* Behind the navbar */
+		  padding: 0 0 0; /* Height of navbar */
+		  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+		}
+
+		.sidebar-sticky {
+		  position: relative;
+		  top: 0;
+		  height: calc(100vh - 48px);
+		  padding-top: .5rem;
+		  overflow-x: hidden;
+		  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+		}
+
+		@supports ((position: -webkit-sticky) or (position: sticky)) {
+		  .sidebar-sticky {
+		    position: -webkit-sticky;
+		    position: sticky;
+		  }
+		}
+
+		.sidebar .nav-link {
+		  font-weight: 500;
+		  color: #333;
+		}
+
+		.sidebar .nav-link .feather {
+		  margin-right: 4px;
+		  color: #999;
+		}
+
+		.sidebar .nav-link.active {
+		  color: #007bff;
+		}
+
+		.sidebar .nav-link:hover .feather,
+		.sidebar .nav-link.active .feather {
+		  color: inherit;
+		}
+
+		.sidebar-heading {
+		  font-size: .75rem;
+		  text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-info">
+		<a class="navbar-brand" href="#">SmartWeb</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 136px;">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+						<div class="btn-group mr-5" role="group" aria-label="First group">
+							<button type="button" class="btn btn-light"><img class="mb-1" src="images/edit.svg" height="16">&nbsp;Edit</button>
+							<button type="button" class="btn btn-light"><img class="mb-1" src="images/eye.svg" height="16">&nbsp;Preview</button>
+						</div>
+						<div class="btn-group mr-5" role="group" aria-label="Second group">
+							<button type="button" class="btn btn-light"><img class="mb-1" src="images/copy.svg" height="16">&nbsp;Copy</button>
+							<button type="button" class="btn btn-light"><img class="mb-1" src="images/trash-alt.svg" height="16">&nbsp;Clear</button>
+						</div>
+						<div class="btn-group mr-5" role="group" aria-label="Third group">
+							<button type="button" class="btn btn-light"><img class="mb-1" src="images/arrow-left.svg" height="16">&nbsp;Undo</button>
+							<button type="button" class="btn btn-light"><img class="mb-1" src="images/arrow-right.svg" height="16">&nbsp;Redo</button>
+						</div>
+						<div class="btn-group" role="group" aria-label="Forth group" style="position: absolute;right: 8.4px;">
+							<img class="mt-1" src="images/github.svg" height="30">&nbsp;
+							<button type="button" class="btn btn-danger">
+								<svg class="octicon octicon-star v-align-text-bottom mb-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+							Star</button>
+							<button type="button" class="btn btn-danger">
+								<svg class="octicon octicon-repo-forked v-align-text-bottom mb-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+							Fork</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="col-2 d-none d-md-block bg-light sidebar">
+		      <div class="sidebar-sticky">
+		      	<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+		          <span>Layout</span>
+		        </h6>
+		        <ul class="nav flex-column mb-2">
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              <span class="badge badge-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              <span class="badge badge-primary">4&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;4</span>
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              <span class="badge badge-primary">2&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;2</span>
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              <span class="badge badge-primary">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10</span>
+		            </a>
+		          </li>
+		        </ul>
+		        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+		          <span>Components</span>
+		        </h6>
+		        <ul class="nav flex-column mb-2">
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Alerts
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Badges
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Breadcrumb
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Button group
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Cards
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Carousel
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Collapse
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Dropdowns
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Forms
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Input group
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Jumbotron
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              List group
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Media object
+		            </a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">
+		              Modal
+		            </a>
+		          </li>
+		        </ul>
+		      </div>
+		    </nav>
+		</div>
+		<main role="main" class="col-10 offset-2 px-4">
+			<div class="alert alert-warning alert-dismissible fade show" role="alert">
+			  <strong>Tips:</strong> If the view is abnormal, please use the Chrome or Firefox browser.
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">XXX</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">首页</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    下拉菜单
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">菜单一</a>
+                    <a class="dropdown-item" href="#">菜单二</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">菜单三</a>
+                    <div class="input-group mb-3" style="padding: 0.25rem 1.5rem;">
+                        <input type="text" class="form-control">
+                        <div class="input-group-append">
+                            <button id="addDropdownItem" class="btn btn-sm btn-outline-primary" type="button">+</button>
+                            <button id="addDropdownDivider" class="btn btn-sm btn-outline-secondary" type="button">-</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+			<li class="nav-item active">
+                <div class="btn-group mt-1" role="group" aria-label="Basic example">
+				  <button type="button" class="btn btn-sm btn-outline-primary">+</button>
+				  <button type="button" class="btn btn-sm btn-outline-secondary">▽</button>
+				</div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<div class="container">
+    <div class="row text-center mb-5">
+        <div class="col">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                <label class="custom-control-label" for="customSwitch1">注册</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
+                <label class="custom-control-label" for="customSwitch2">登录</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                <label class="custom-control-label" for="customSwitch3">注销</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                <label class="custom-control-label" for="customSwitch4">页眉</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                <label class="custom-control-label" for="customSwitch5">页尾</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch6">
+                <label class="custom-control-label" for="customSwitch6">反馈</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 offset-4">
+            <button type="button" class="btn btn-primary btn-lg btn-block">生成自定义项目</button>
+        </div>
+    </div>
+	<!-- Button trigger modal -->
+<button id="setValue" type="button" class="btn btn-primary d-none" data-toggle="modal" data-target="#exampleModalCenter">
+  赋值
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">为选中的元素赋值</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+			<input id="newValue" type="text" class="form-control" placeholder="为选中的元素赋值">
+		  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+		</main>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script>
+		$("#addDropdownItem").click(function (e) {
+			e.stopPropagation();
+			if ($(this).parent().prev().val() == "") {
+				return;
+			}
+			$(this).parent().parent()
+				.before('<a class="dropdown-item" href="#">' + $(this).parent().prev().val() + '</a>');
+			$(this).blur().parent().prev().val("");
+		});
+		$("#addDropdownDivider").click(function (e) {
+			e.stopPropagation();
+			if ($(this).parent().parent().prev().hasClass("dropdown-divider")) {
+				return;
+			}
+			$(this).parent().parent()
+				.before('<div class="dropdown-divider"></div>');
+			$(this).blur();
+		});
+		$(".nav-item").dblclick(function(){
+		  $("#setValue").trigger("click");
+		});
+</script>
+</body>
+</html>
