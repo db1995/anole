@@ -16,13 +16,13 @@ import java.util.List;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SmartWebApplicationTests {
+public class AnoleApplicationTests {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Test
     public void contextLoads() {
-        String creatsql = "CREATE TABLE pepole("
+        String createSQL = "CREATE TABLE pepole("
                 + "name varchar(10) not null,"
                 + "age int(4) not null"
                 + ")charset=utf8;";
