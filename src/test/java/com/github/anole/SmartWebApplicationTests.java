@@ -1,4 +1,4 @@
-package com.github.smartweb;
+package com.github.anole;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

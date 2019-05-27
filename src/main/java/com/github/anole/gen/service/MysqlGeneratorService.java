@@ -1,4 +1,4 @@
-package com.github.smartweb.gen.service;
+package com.github.anole.gen.service;
 
 /**
  * Interface of MySQL generator

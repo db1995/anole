@@ -1,4 +1,4 @@
-package com.github.smartweb;
+package com.github.anole;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
