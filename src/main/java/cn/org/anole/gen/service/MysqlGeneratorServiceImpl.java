@@ -1,6 +1,5 @@
-package com.github.anole.gen.service;
+package cn.org.anole.gen.service;
 
-import com.github.anole.gen.service.MysqlGeneratorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;

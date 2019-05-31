@@ -1,4 +1,4 @@
-package com.github.anole;
+package cn.org.anole;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

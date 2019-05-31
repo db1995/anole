@@ -1,6 +1,6 @@
-package com.github.anole.gen.controller;
+package cn.org.anole.gen.controller;
 
-import com.github.anole.gen.service.MysqlGeneratorService;
+import cn.org.anole.gen.service.MysqlGeneratorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.github.anole.gen.service;
+package cn.org.anole.gen.service;
 
 /**
  * Interface of MySQL generator

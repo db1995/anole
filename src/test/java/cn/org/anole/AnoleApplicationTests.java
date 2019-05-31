@@ -1,4 +1,4 @@
-package com.github.anole;
+package cn.org.anole;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
