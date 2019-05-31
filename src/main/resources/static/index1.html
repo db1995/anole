@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Anole - 初始化</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+    <b class="navbar-brand">Anole</b>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <span class="ml-5 text-info">（如果页面显示异常，请尝试使用较新版本的Chrome或FireFox浏览器）</span>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <nav class="d-none navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">XXX</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        下拉菜单
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">菜单一</a>
+                        <a class="dropdown-item" href="#">菜单二</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">菜单三</a>
+                        <div class="input-group mb-3" style="padding: 0.25rem 1.5rem;">
+                            <input type="text" class="form-control">
+                            <div class="input-group-append">
+                                <button id="addDropdownItem" class="btn btn-sm btn-outline-primary" type="button">+
+                                </button>
+                                <button id="addDropdownDivider" class="btn btn-sm btn-outline-secondary" type="button">
+                                    -
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="btn-group mt-1" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-sm btn-outline-primary">+</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">▽</button>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mb-5 ml-5">
+            <div class="col-12 mb-3">
+                <h4>按网站类别选择：</h4>
+            </div>
+            <div class="col-12">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-forum-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                            论坛社区
+                        </a>
+                        <a class="nav-item nav-link" id="nav-mall-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+                            网上商城
+                        </a>
+                        <a class="nav-item nav-link" id="nav-blog-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                            个人博客
+                        </a>
+                        <a class="nav-item nav-link" id="nav-company-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                            企业官网
+                        </a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-forum" role="tabpanel" aria-labelledby="nav-forum-tab">
+                        ...
+                    </div>
+                    <div class="tab-pane fade" id="nav-mall" role="tabpanel" aria-labelledby="nav-mall-tab">...</div>
+                    <div class="tab-pane fade" id="nav-blog" role="tabpanel" aria-labelledby="nav-blog-tab">...</div>
+                    <div class="tab-pane fade" id="nav-company" role="tabpanel" aria-labelledby="nav-company-tab">...</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5 ml-5">
+            <div class="col-12 mb-3">
+                <h4>按功能逐个选择：</h4>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                    <label class="custom-control-label" for="customSwitch1">注册</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
+                    <label class="custom-control-label" for="customSwitch2">登录</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                    <label class="custom-control-label" for="customSwitch3">注销</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                    <label class="custom-control-label" for="customSwitch4">页眉</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                    <label class="custom-control-label" for="customSwitch5">页尾</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch6">
+                    <label class="custom-control-label" for="customSwitch6">反馈</label>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5 ml-5">
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch7">
+                    <label class="custom-control-label" for="customSwitch7">权限管理</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch8">
+                    <label class="custom-control-label" for="customSwitch8">收藏</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch9">
+                    <label class="custom-control-label" for="customSwitch9">搜索</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch10">
+                    <label class="custom-control-label" for="customSwitch10">论坛</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch11">
+                    <label class="custom-control-label" for="customSwitch11">内容管理</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch12">
+                    <label class="custom-control-label" for="customSwitch12">统计</label>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5 ml-5">
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch13">
+                    <label class="custom-control-label" for="customSwitch13">在线聊天</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch14">
+                    <label class="custom-control-label" for="customSwitch14">支付</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch15">
+                    <label class="custom-control-label" for="customSwitch15">用户管理</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch16">
+                    <label class="custom-control-label" for="customSwitch16">页面优化</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch17">
+                    <label class="custom-control-label" for="customSwitch17">关于本站</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch18">
+                    <label class="custom-control-label" for="customSwitch18">系统监控</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 offset-4">
+                <button type="button" class="btn btn-success btn-lg btn-block">生成自定义项目</button>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <button id="setValue" type="button" class="btn btn-primary d-none" data-toggle="modal"
+                data-target="#exampleModalCenter">
+            赋值
+        </button>
+        <button id="btnChooseFront" type="button" class="btn btn-primary d-none" data-toggle="modal" data-target="#modalChooseFront">
+            是否使用自定义前端页面
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalChooseFront" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">请选择是否使用自己的前端内容</h5>
+                    </div>
+                    <div class="modal-body pt-0 pb-0">
+                        <div class="row">
+                            <div class="col p-0">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">我有自己的一套前端</h5>
+                                        <p class="card-text">仅使用Anole提供的常用功能接口，自行完成前后对接的工作。</p>
+                                        <a id="ownFront" href="#" class="btn btn-secondary">我选这个</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-0">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">我想用Anole的前端</h5>
+                                        <p class="card-text">前后端均使用Anole提供的内容，快速开发一个Web应用项目。</p>
+                                        <a id="anoleFront" href="#" class="btn btn-secondary">我选这个</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="confirmFront" type="button" class="btn btn-primary m-3">确认选择</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">为选中的元素赋值</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input id="newValue" type="text" class="form-control" placeholder="为选中的元素赋值">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(function () {
+        $("#btnChooseFront").trigger("click")
+    })
+    $("#ownFront").click(function () {
+        $(this).removeClass("bg-secondary").addClass("bg-success")
+        $("#anoleFront").addClass("bg-secondary").removeClass("bg-success")
+    })
+    $("#anoleFront").click(function () {
+        $(this).removeClass("bg-secondary").addClass("bg-success")
+        $("#ownFront").addClass("bg-secondary").removeClass("bg-success")
+    })
+    $("#confirmFront").click(function () {
+        if ($("#ownFront").hasClass("bg-success")) {
+            // TODO 只显示选择功能页面
+            $("#modalChooseFront").modal('hide')
+        } else if ($("#anoleFront").hasClass("bg-success")) {
+            // TODO 先显示选择功能页面，再显示UI页面
+            $("#modalChooseFront").modal('hide')
+        } else {
+            return
+        }
+        $("#modalChooseFront").modal('hide')
+    })
+    $('#modalChooseFront').on('hidden.bs.modal', function (e) {
+        // TODO 根据选择，显示相应的页面
+    })
+    $("#addDropdownItem").click(function (e) {
+        e.stopPropagation();
+        if ($(this).parent().prev().val() == "") {
+            return;
+        }
+        $(this).parent().parent()
+            .before('<a class="dropdown-item" href="#">' + $(this).parent().prev().val() + '</a>');
+        $(this).blur().parent().prev().val("");
+    });
+    $("#addDropdownDivider").click(function (e) {
+        e.stopPropagation();
+        if ($(this).parent().parent().prev().hasClass("dropdown-divider")) {
+            return;
+        }
+        $(this).parent().parent()
+            .before('<div class="dropdown-divider"></div>');
+        $(this).blur();
+    });
+    $(".nav-item").dblclick(function () {
+        $("#setValue").trigger("click");
+    });
+</script>
+</body>
+</html>
