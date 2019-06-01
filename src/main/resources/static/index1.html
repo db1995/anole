@@ -15,8 +15,7 @@
             aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <span class="ml-5 text-info">（如果页面显示异常，请尝试使用较新版本的Chrome或FireFox浏览器）</span>
-    </div>
+    <span class="text-muted">（如果页面显示异常，请尝试使用较新版本的Chrome或FireFox浏览器）</span>
 </nav>
 
 <div class="container-fluid">
@@ -76,28 +75,124 @@
             <div class="col-12">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-forum-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                        <a class="nav-item nav-link active text-info" id="nav-forum-tab"
+                           data-toggle="tab" href="#nav-forum" role="tab">
                             论坛社区
                         </a>
-                        <a class="nav-item nav-link" id="nav-mall-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+                        <a class="nav-item nav-link text-info" id="nav-mall-tab" data-toggle="tab" href="#nav-mall" role="tab">
                             网上商城
                         </a>
-                        <a class="nav-item nav-link" id="nav-blog-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        <a class="nav-item nav-link text-info" id="nav-blog-tab" data-toggle="tab" href="#nav-blog" role="tab">
                             个人博客
                         </a>
-                        <a class="nav-item nav-link" id="nav-company-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        <a class="nav-item nav-link text-info" id="nav-company-tab" data-toggle="tab" href="#nav-company" role="tab">
                             企业官网
+                        </a>
+                        <a class="nav-item nav-link text-info" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab">
+                            信息系统
                         </a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-forum" role="tabpanel" aria-labelledby="nav-forum-tab">
-                        ...
+                        <div class="row mt-4 mb-4">
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="templateSwitch1" checked>
+                                    <label class="custom-control-label" for="templateSwitch1" data-toggle="tooltip"
+                                           data-placement="bottom" title="用户注册">注册</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="templateSwitch2" checked>
+                                    <label class="custom-control-label" for="templateSwitch2" data-toggle="tooltip"
+                                           data-placement="bottom" title="用户登录">登录</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id=templateSwitch3" checked>
+                                    <label class="custom-control-label" for="templateSwitch3" data-toggle="tooltip"
+                                           data-placement="bottom" title="闲时可注销账号，提高安全性">注销</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="templateSwitch4" checked>
+                                    <label class="custom-control-label" for="templateSwitch4">收藏</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="templateSwitch5" checked>
+                                    <label class="custom-control-label" for="templateSwitch5">页尾</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="templateSwitch6" checked>
+                                    <label class="custom-control-label" for="templateSwitch6">反馈</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="templateSwitch7" checked>
+                                    <label class="custom-control-label" for="templateSwitch7" data-toggle="tooltip"
+                                           data-placement="bottom" title="用户注册">搜索</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="templateSwitch8" checked>
+                                    <label class="custom-control-label" for="templateSwitch8" data-toggle="tooltip"
+                                           data-placement="bottom" title="用户登录">关于本站</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id=templateSwitch9" checked>
+                                    <label class="custom-control-label" for="templateSwitch9" data-toggle="tooltip"
+                                           data-placement="bottom" title="闲时可注销账号，提高安全性">系统监控</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="templateSwitch10" checked>
+                                    <label class="custom-control-label" for="templateSwitch10">统计</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="templateSwitch11" checked>
+                                    <label class="custom-control-label" for="templateSwitch11">用户管理</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="templateSwitch12" checked>
+                                    <label class="custom-control-label" for="templateSwitch12">页面优化</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-mall" role="tabpanel" aria-labelledby="nav-mall-tab">...</div>
-                    <div class="tab-pane fade" id="nav-blog" role="tabpanel" aria-labelledby="nav-blog-tab">...</div>
-                    <div class="tab-pane fade" id="nav-company" role="tabpanel" aria-labelledby="nav-company-tab">...</div>
+                    <div class="tab-pane fade" id="nav-mall" role="tabpanel" aria-labelledby="nav-mall-tab">
+                        待开发...
+                    </div>
+                    <div class="tab-pane fade" id="nav-blog" role="tabpanel" aria-labelledby="nav-blog-tab">
+                        待开发...
+                    </div>
+                    <div class="tab-pane fade" id="nav-company" role="tabpanel" aria-labelledby="nav-company-tab">
+                        待开发...
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-4 offset-4">
+                <button type="button" class="btn btn-success btn-lg btn-block">一键生成模板项目</button>
             </div>
         </div>
         <div class="row mb-5 ml-5">
@@ -107,19 +202,22 @@
             <div class="col">
                 <div class="custom-control custom-switch">
                     <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
-                    <label class="custom-control-label" for="customSwitch1">注册</label>
+                    <label class="custom-control-label" for="customSwitch1" data-toggle="tooltip"
+                           data-placement="bottom" title="用户注册">注册</label>
                 </div>
             </div>
             <div class="col">
                 <div class="custom-control custom-switch">
                     <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
-                    <label class="custom-control-label" for="customSwitch2">登录</label>
+                    <label class="custom-control-label" for="customSwitch2" data-toggle="tooltip"
+                           data-placement="bottom" title="用户登录">登录</label>
                 </div>
             </div>
             <div class="col">
                 <div class="custom-control custom-switch">
                     <input type="checkbox" class="custom-control-input" id="customSwitch3">
-                    <label class="custom-control-label" for="customSwitch3">注销</label>
+                    <label class="custom-control-label" for="customSwitch3" data-toggle="tooltip"
+                           data-placement="bottom" title="闲时可注销账号，提高安全性">注销</label>
                 </div>
             </div>
             <div class="col">
@@ -219,7 +317,7 @@
         </div>
         <div class="row">
             <div class="col-4 offset-4">
-                <button type="button" class="btn btn-success btn-lg btn-block">生成自定义项目</button>
+                <button type="button" class="btn btn-success btn-lg btn-block">一键生成自定义项目</button>
             </div>
         </div>
 
@@ -295,6 +393,7 @@
 <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <script>
     $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
         $("#btnChooseFront").trigger("click")
     })
     $("#ownFront").click(function () {
