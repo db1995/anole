@@ -9,13 +9,13 @@
     <title>Anole - 初始化</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
     <b class="navbar-brand">Anole</b>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
             aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <span class="text-muted">（如果页面显示异常，请尝试使用较新版本的Chrome或FireFox浏览器）</span>
+    <span class="text-light">（如果页面显示异常，请尝试使用较新版本的Chrome或FireFox浏览器）</span>
 </nav>
 
 <div class="container-fluid">
@@ -140,22 +140,19 @@
                             <div class="col">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="templateSwitch7" checked>
-                                    <label class="custom-control-label" for="templateSwitch7" data-toggle="tooltip"
-                                           data-placement="bottom" title="用户注册">搜索</label>
+                                    <label class="custom-control-label" for="templateSwitch7">搜索</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="templateSwitch8" checked>
-                                    <label class="custom-control-label" for="templateSwitch8" data-toggle="tooltip"
-                                           data-placement="bottom" title="用户登录">关于本站</label>
+                                    <label class="custom-control-label" for="templateSwitch8">关于本站</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id=templateSwitch9" checked>
-                                    <label class="custom-control-label" for="templateSwitch9" data-toggle="tooltip"
-                                           data-placement="bottom" title="闲时可注销账号，提高安全性">系统监控</label>
+                                    <label class="custom-control-label" for="templateSwitch9">系统监控</label>
                                 </div>
                             </div>
                             <div class="col">
@@ -192,7 +189,10 @@
         </div>
         <div class="row mb-5">
             <div class="col-4 offset-4">
-                <button type="button" class="btn btn-success btn-lg btn-block">一键生成模板项目</button>
+                <button id="createTemplateProject" type="button" class="btn btn-success btn-lg btn-block">
+                    生成中...
+                    <span class="spinner-border spinner-border-sm mb-1" role="status" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
         <div class="row mb-5 ml-5">
@@ -395,6 +395,9 @@
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
         $("#btnChooseFront").trigger("click")
+    })
+    $("#createTemplateProject").click(function () {
+
     })
     $("#ownFront").click(function () {
         $(this).removeClass("bg-secondary").addClass("bg-success")
