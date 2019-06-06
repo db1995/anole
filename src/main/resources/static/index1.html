@@ -394,6 +394,8 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script>
+    // 是否使用Anole的UI
+    var useAnoleUI
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
         $("#btnChooseFront").trigger("click")
@@ -405,10 +407,14 @@
         $(this).html("生成中...<span class=\"spinner-border spinner-border-sm mb-1\" role=\"status\"></span>")
     })
     $("#ownFront").click(function () {
+        useAnoleUI = false
+        // TODO 选择功能 -> 生成项目
         $(this).removeClass("bg-secondary").addClass("bg-success")
         $("#anoleFront").addClass("bg-secondary").removeClass("bg-success")
     })
     $("#anoleFront").click(function () {
+        useAnoleUI = true
+        // TODO 选择功能 -> 调整UI -> 生成项目
         $(this).removeClass("bg-secondary").addClass("bg-success")
         $("#ownFront").addClass("bg-secondary").removeClass("bg-success")
     })
