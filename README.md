@@ -3,18 +3,18 @@
 
 > *English intro:*
 
-Start your web application out of the box.
+Build your Spring Cloud application as fast as possible.
 
 ### Features:
-* Provides a series of general styles and utilities
-* Flexible switching of your favorite
-* The application finally contains only what you need
+* Build fast
+* Flexible switching what you need
+* Contain popular and reliable components
 
 > *中文简介：*
 
-开箱即用般便利地开发你的Web应用。
+快速构建你的Spring微服务应用。
 
 ### 特性：
-* 提供一系列通用的样式及功能
-* 灵活地选择你所喜欢的内容
-* 最终生成后的应用将只包含你所需要的部分
+* 快速构建
+* 灵活地选择你所需要的
+* 包含应用广泛且可靠的组件
