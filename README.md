@@ -9,6 +9,8 @@ Quickly and conveniently build Instant Messaging service for your application.
 * High performance
 * Build quickly and conveniently
 
+> *中文简介：*
+
 快速方便地为你的应用构建即时通讯服务。
 
 ### 特性：
